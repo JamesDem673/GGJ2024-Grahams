@@ -12,7 +12,6 @@ public class BasicMovement : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Hit");
         if (other.gameObject.name.Equals("Dangerzone"))
         {
             Destroy(gameObject);
