@@ -23,7 +23,7 @@ public class CowBehaviour : MonoBehaviour
         if (collision.gameObject.tag == "Text")
         {
             GameObject newMoo = Instantiate(moo);
-            newMoo.transform.position = transform.position;
+            newMoo.transform.position = new Vector2(transform.position.x, 0);
         }
     }
 }

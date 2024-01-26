@@ -24,7 +24,6 @@ public class CowShedBehaviour : MonoBehaviour
         {
             if (Input.GetAxis("Jump") != 0)
             {
-                Debug.Log("Moo");
                 GameObject newCow = Instantiate(cow);
                 newCow.transform.position = transform.position;
                 newCow.GetComponent<CowBehaviour>().moo = moo;
