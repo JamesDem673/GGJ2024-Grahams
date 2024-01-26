@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Cow.unity
     guid: f065cc7ed813e9a4ba08380521ece9ab
+  - enabled: 1
+    path: Assets/Scenes/Levels/ChickenScene.unity
+    guid: 1563107f8f61e6649b2578795749833d
   m_configObjects: {}

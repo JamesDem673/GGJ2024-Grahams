@@ -17,6 +17,8 @@ public class LevelSelect : MonoBehaviour
             scenes[i] = scenes[i].Replace(".unity", "");
             print(scenes[i]);
         }
-        SceneManager.LoadScene(scenes[Random.Range(0,scenes.Length-1)]);
+        int a = Random.Range(0, scenes.Length);
+        print(a);
+        SceneManager.LoadScene(scenes[a]);
     }
 }
