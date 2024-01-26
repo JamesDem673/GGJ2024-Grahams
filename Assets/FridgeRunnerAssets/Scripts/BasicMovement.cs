@@ -14,6 +14,7 @@ public class BasicMovement : MonoBehaviour
     {
         if (other.gameObject.name.Equals("Dangerzone"))
         {
+            transform.GetChild(0).SetParent(null, true);
             Destroy(gameObject);
         }
     }
