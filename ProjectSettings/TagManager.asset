@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Text
+  - WinCondition
+  - LoseCondition
+  - CarBounds
   layers:
   - Default
   - TransparentFX
