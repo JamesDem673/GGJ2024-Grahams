@@ -5,7 +5,7 @@ using UnityEngine;
 public class ChickenMovement : MonoBehaviour
 {
     private Rigidbody2D chickenBody;
-    public int speed;
+    public int chickenSpeed;
 
     private void Awake()
     {
@@ -14,7 +14,7 @@ public class ChickenMovement : MonoBehaviour
 
     private void Update()
     {
-        chickenBody.velocity = new Vector2(Input.GetAxis("Horizontal") * speed, Input.GetAxis("Vertical") * speed);
+        chickenBody.velocity = new Vector2(Input.GetAxis("Horizontal") * chickenSpeed, Input.GetAxis("Vertical") * chickenSpeed);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
