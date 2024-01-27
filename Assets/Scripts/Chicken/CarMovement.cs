@@ -17,7 +17,7 @@ public class CarMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "CarBounds")
+        if (collision.tag == "Bounds")
         {
             carBody.velocity = -carBody.velocity;
             transform.localScale = -transform.localScale;

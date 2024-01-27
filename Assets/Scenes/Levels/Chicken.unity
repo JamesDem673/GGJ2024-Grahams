@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 57478206}
   m_Layer: 0
   m_Name: UCarBound
-  m_TagString: CarBounds
+  m_TagString: Bounds
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3929,7 +3929,7 @@ GameObject:
   - component: {fileID: 1917113519}
   m_Layer: 0
   m_Name: DCarBound
-  m_TagString: CarBounds
+  m_TagString: Bounds
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

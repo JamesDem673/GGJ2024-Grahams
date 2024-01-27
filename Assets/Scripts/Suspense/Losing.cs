@@ -5,21 +5,13 @@ using UnityEngine;
 public class Losing : MonoBehaviour
 {
     public GameObject loss;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
+    public RopeMovement rope;
+    public LevelDataScriptableObject levelData;
 
     public void SuspenseLoss()
     {
         loss.SetActive(true);
+        rope.burnSpeed = 0;
+        levelData.succeeded = false;
     }
 }
