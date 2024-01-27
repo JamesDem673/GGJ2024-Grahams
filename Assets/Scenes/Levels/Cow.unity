@@ -646,7 +646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cow: {fileID: 8637991416776394271, guid: 060de88a488989d448ef96725c2d6c04, type: 3}
-  cooldown: 1
+  cooldown: 1.5
   moveamount: 3
   movespeed: 5
   levelData: {fileID: 11400000, guid: cf677954b330cac45b6cace6ca4fd027, type: 2}
