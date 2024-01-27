@@ -6,7 +6,7 @@ public class Losing : MonoBehaviour
 {
     public GameObject loss;
     public RopeMovement rope;
-    public LevelDataScriptableObject levelData;
+    public GameData levelData;
 
     public void SuspenseLoss()
     {
