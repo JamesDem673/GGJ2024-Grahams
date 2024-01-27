@@ -11,7 +11,8 @@ public class CarMovement : MonoBehaviour
     private void Awake()
     {
         carBody = GetComponent<Rigidbody2D>();
-        carBody.velocity = new Vector2(0, carSpeed * levelData.speed);
+        carSpeed = carSpeed * levelData.speed;
+        carBody.velocity = new Vector2(0, carSpeed);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

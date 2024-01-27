@@ -1872,7 +1872,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9234c741411b72340926038eed1b7224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carSpeed: 3
+  carSpeed: 7
   levelData: {fileID: 11400000, guid: cf677954b330cac45b6cace6ca4fd027, type: 2}
 --- !u!50 &708193816
 Rigidbody2D:
@@ -2936,7 +2936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9234c741411b72340926038eed1b7224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carSpeed: 3
+  carSpeed: 7
   levelData: {fileID: 11400000, guid: cf677954b330cac45b6cace6ca4fd027, type: 2}
 --- !u!50 &1136617255
 Rigidbody2D:
