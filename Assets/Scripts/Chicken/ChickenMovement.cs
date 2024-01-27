@@ -5,11 +5,13 @@ using UnityEngine;
 public class ChickenMovement : MonoBehaviour
 {
     private Rigidbody2D chickenBody;
-    public int chickenSpeed;
+    public float chickenSpeed;
+    public LevelDataScriptableObject levelData;
 
     private void Awake()
     {
         chickenBody = GetComponent<Rigidbody2D>();
+        chickenSpeed = (float)(chickenSpeed * (levelData.speed / 1.5));
     }
 
     private void Update()

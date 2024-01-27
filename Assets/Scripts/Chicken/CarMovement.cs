@@ -5,12 +5,13 @@ using UnityEngine;
 public class CarMovement : MonoBehaviour
 {
     private Rigidbody2D carBody;
-    public int carSpeed;
+    public float carSpeed;
+    public LevelDataScriptableObject levelData;
 
     private void Awake()
     {
         carBody = GetComponent<Rigidbody2D>();
-        carBody.velocity = new Vector2(0, carSpeed);
+        carBody.velocity = new Vector2(0, carSpeed * levelData.speed);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
