@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,8 +10,26 @@ public class LevelSelect : MonoBehaviour
 {
     public LevelDataScriptableObject data;
     string nextLevel;
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI livesText;
     private void Awake()
     {
+        if (data.currentLevel != -1)
+        {
+            if (data.succeeded)
+            {
+                data.score += 100;
+                data.speed += 0.5f;
+            }
+            else
+            {
+                data.lives--;
+            }
+        }
+
+        livesText.text = data.lives.ToString();
+        scoreText.text = data.score.ToString();
+
         string[] scenes = Directory.GetFiles("Assets/Scenes/Levels", "*.unity", SearchOption.TopDirectoryOnly);
         for (int i = 0; i < scenes.Length; i++)
         {
@@ -34,7 +53,7 @@ public class LevelSelect : MonoBehaviour
                 }
                 else
                 {
-
+                    removedIndex = i;
                 }
             }
             int a = Random.Range(0, scenes2.Length);
