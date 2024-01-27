@@ -12,6 +12,7 @@ public class LevelSelect : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI livesText;
     public TextMeshProUGUI jokeText;
+    public GameObject startText;
 
     public float jokeEndTime;
     bool jokeEndShowing = false;
@@ -36,7 +37,7 @@ public class LevelSelect : MonoBehaviour
             else
             {
                 data.lives--;
-                jokeText.text = "Level Failed";
+                jokeText.text = levels[data.currentLevel].jokeFail;
             }
         }
 
@@ -85,6 +86,7 @@ public class LevelSelect : MonoBehaviour
             nextLevel = levels[a];
             data.currentLevel = a;
             jokeText.text = nextLevel.jokeStart;
+            startText.SetActive(true);
         }
     }
 
@@ -97,6 +99,7 @@ public class LevelSelect : MonoBehaviour
             {
                 jokeEndShowing = false;
                 jokeText.text = nextLevel.jokeStart;
+                startText.SetActive(true);
             }
         }
         else

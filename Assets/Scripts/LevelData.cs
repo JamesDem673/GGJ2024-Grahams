@@ -6,6 +6,9 @@ using UnityEngine;
 public class LevelData : ScriptableObject
 {
     public string sceneName;
+
+    [Multiline]
     public string jokeStart;
     public string jokeEnd;
+    public string jokeFail;
 }

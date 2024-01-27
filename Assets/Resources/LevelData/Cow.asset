@@ -13,5 +13,10 @@ MonoBehaviour:
   m_Name: Cow
   m_EditorClassIdentifier: 
   sceneName: Cow
-  jokeStart: Knock knock? Who's there? The interrupting cow
+  jokeStart: 'Knock knock?
+
+    Who''s there?
+
+    The interrupting cow'
   jokeEnd: Moo
+  jokeFail: The interrupting cow who?

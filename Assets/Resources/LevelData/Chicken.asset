@@ -15,3 +15,4 @@ MonoBehaviour:
   sceneName: Chicken
   jokeStart: Why did the chicken cross the road?
   jokeEnd: To get to the other side!
+  jokeFail: To get hit by a car!
