@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 628ef648c93d30145addc45b525a1e6d, type: 3}
   m_Name: Data
   m_EditorClassIdentifier: 
-  speed: 1.5
-  score: 200
+  speed: 4
+  score: 700
   currentLevel: 2
-  lives: -4
+  lives: 4
   succeeded: 0
