@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/Chicken.unity
     guid: 1563107f8f61e6649b2578795749833d
   - enabled: 1
-    path: Assets/Scenes/Fridge.unity
+    path: Assets/Scenes/Levels/Fridge.unity
     guid: 25e91c6b2144701459a43a5669d997c3
+  - enabled: 1
+    path: Assets/Scenes/Levels/Suspense.unity
+    guid: 1c091b2d9a57e334c9882fee745569d2
   m_configObjects: {}

@@ -12,7 +12,7 @@ public class CowShedBehaviour : MonoBehaviour
     float linepos;
     bool fireable = true;
     float timer = 0;
-    public LevelDataScriptableObject levelData;
+    public GameData levelData;
 
     private void Awake()
     {
@@ -22,6 +22,8 @@ public class CowShedBehaviour : MonoBehaviour
     private void Update()
     {
         linepos += Time.deltaTime * movespeed;
+        if (linepos > 360)
+            linepos -= 360;
         transform.position = new Vector3(startpos + Mathf.Sin(linepos) * moveamount, transform.position.y, 0);
         if (!fireable)
         {
