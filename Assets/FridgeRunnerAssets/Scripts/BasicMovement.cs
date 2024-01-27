@@ -36,11 +36,6 @@ public class BasicMovement : MonoBehaviour
                     GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
                 }
             }
-
-            else
-            {
-                GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionZ;
-            }
         }
 
         if (gameObject.name.Equals("Fridge"))
@@ -48,11 +43,6 @@ public class BasicMovement : MonoBehaviour
             if (movement)
             {
                 transform.position += new Vector3(0, 0, -movementSpeed * Time.deltaTime);
-            }
-
-            else
-            {
-                GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionZ;
             }
         }
 
@@ -62,17 +52,24 @@ public class BasicMovement : MonoBehaviour
     {
         if (other.gameObject.name.Equals("Dangerzone"))
         {
-            if (gameObject.name.Equals("Player"))
-            {
-                transform.GetChild(0).SetParent(null, true);
-            }
-            Destroy(gameObject);
+            PlayerLoses(); 
         }
 
         if (other.gameObject.name.Equals("BlockStop"))
         {
-            movement = false;
+            PlayerWins();
         }
     }
 
+    void PlayerLoses()
+    {
+        transform.GetChild(0).SetParent(null, true);
+        Destroy(gameObject);
+    }
+
+    void PlayerWins()
+    {
+        movement = false;
+        GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+    }
 }
