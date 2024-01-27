@@ -63,11 +63,6 @@ public class ObstacleControl : MonoBehaviour
         }
     }
 
-    void SwitchLane(float safelaneActive)
-    {
-
-    }
-
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.name.Equals("Fridge"))
