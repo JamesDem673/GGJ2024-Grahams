@@ -7,7 +7,7 @@ public class CowBehaviour : MonoBehaviour
 {
     public float speed;
     public GameObject moo;
-    public LevelDataScriptableObject levelData;
+    public GameData levelData;
 
     private void Awake()
     {

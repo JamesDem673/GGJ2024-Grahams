@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class StartBehaviour : MonoBehaviour
 {
-    public LevelDataScriptableObject levelData;
+    public GameData levelData;
     public int startSpeed;
     public int startLives;
 

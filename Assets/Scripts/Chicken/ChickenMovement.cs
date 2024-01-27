@@ -7,7 +7,7 @@ public class ChickenMovement : MonoBehaviour
 {
     private Rigidbody2D chickenBody;
     public float chickenSpeed;
-    public LevelDataScriptableObject levelData;
+    public GameData levelData;
 
     private void Awake()
     {

@@ -10,7 +10,7 @@ public class RopeMovement : MonoBehaviour
     public GameObject winText;
     public Button button;
     public float burnSpeed;
-    public LevelDataScriptableObject levelData;
+    public GameData levelData;
 
     void Start()
     {
