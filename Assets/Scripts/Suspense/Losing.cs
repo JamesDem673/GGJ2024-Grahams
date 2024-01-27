@@ -15,8 +15,7 @@ public class Losing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.anyKey)
-            SuspenseLoss();
+       
     }
 
     public void SuspenseLoss()
