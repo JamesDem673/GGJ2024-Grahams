@@ -1,39 +1,60 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class BasicMovement : MonoBehaviour
 {
     bool movement = true;
 
+    float targetXpos = -1000;
+    float stepLength = 0.5f;
+
     private void Update()
     {
         //a +   d -
-        float x_movement = 0;
-        int strafeSpeed = 4;
         int movementSpeed = 50;
 
         if (gameObject.name.Equals("Player"))
         {
             if (Input.GetKeyDown(KeyCode.A))
             {
-                x_movement = strafeSpeed;
+                if (transform.position.x == -4)
+                {
+                    targetXpos = 0;
+                }
+                else if (transform.position.x == 0)
+                {
+                    targetXpos = 4;
+                }
+                stepLength = 0.5f;
             }
+
 
             if (Input.GetKeyDown(KeyCode.D))
             {
-                x_movement = -strafeSpeed;
+                if (transform.position.x == 4)
+                {
+                    targetXpos = 0;
+                }
+                else if (transform.position.x == 0)
+                {
+                    targetXpos = -4;
+                }
+                stepLength = -0.5f;
             }
 
 
             if (movement)
             {
-                transform.position += new Vector3(x_movement, 0, -movementSpeed * Time.deltaTime);
-
-                if(transform.position.x > 6 || transform.position.x < -6)
+                if (targetXpos == -1000 | targetXpos == transform.position.x)
                 {
-                    GetComponent<Rigidbody>().useGravity = true;
-                    GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+                    transform.position += new Vector3(0, 0, -movementSpeed * Time.deltaTime);
+                    stepLength = 0f;
+                }
+                else
+                {
+                    transform.position += new Vector3(stepLength, 0, -movementSpeed * Time.deltaTime);                             
                 }
             }
         }
@@ -69,6 +90,7 @@ public class BasicMovement : MonoBehaviour
 
     void PlayerWins()
     {
+        Debug.Log("Win");
         movement = false;
         GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
     }
