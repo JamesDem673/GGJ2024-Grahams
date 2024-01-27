@@ -738,7 +738,7 @@ MonoBehaviour:
   livesText: {fileID: 856456055}
   jokeText: {fileID: 1230951963}
   startText: {fileID: 184378571}
-  jokeEndTime: 4
+  jokeEndTime: 2.5
 --- !u!1 &1230951961
 GameObject:
   m_ObjectHideFlags: 0
