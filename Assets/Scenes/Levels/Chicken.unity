@@ -1468,6 +1468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chickenSpeed: 5
+  levelData: {fileID: 11400000, guid: cf677954b330cac45b6cace6ca4fd027, type: 2}
 --- !u!61 &561267966
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1872,6 +1873,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSpeed: 7
+  levelData: {fileID: 11400000, guid: cf677954b330cac45b6cace6ca4fd027, type: 2}
 --- !u!50 &708193816
 Rigidbody2D:
   serializedVersion: 4
@@ -2935,6 +2937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carSpeed: 7
+  levelData: {fileID: 11400000, guid: cf677954b330cac45b6cace6ca4fd027, type: 2}
 --- !u!50 &1136617255
 Rigidbody2D:
   serializedVersion: 4

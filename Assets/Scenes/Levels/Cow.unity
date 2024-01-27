@@ -646,7 +646,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cow: {fileID: 8637991416776394271, guid: 060de88a488989d448ef96725c2d6c04, type: 3}
-  moo: {fileID: 1496824482589796675, guid: eaa0a2f28dd1a8c489d1950a47b4e7fe, type: 3}
   cooldown: 1
   moveamount: 3
   movespeed: 5
@@ -1147,7 +1146,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1388816230123978755, guid: f7f8971d15dcfbe4ba2a92a867ec58c2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.229
+      value: -12.22
       objectReference: {fileID: 0}
     - target: {fileID: 1388816230123978755, guid: f7f8971d15dcfbe4ba2a92a867ec58c2, type: 3}
       propertyPath: m_LocalPosition.y

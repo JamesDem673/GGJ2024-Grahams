@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MooBehaviour : MonoBehaviour
 {
@@ -19,6 +21,7 @@ public class MooBehaviour : MonoBehaviour
         if (timer > activeTime)
         {
             Destroy(gameObject);
+            SceneManager.LoadScene("LevelSelect");
         }
     }
 }

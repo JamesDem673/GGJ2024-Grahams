@@ -1,15 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ChickenMovement : MonoBehaviour
 {
     private Rigidbody2D chickenBody;
-    public int chickenSpeed;
+    public float chickenSpeed;
+    public LevelDataScriptableObject levelData;
 
     private void Awake()
     {
         chickenBody = GetComponent<Rigidbody2D>();
+        chickenSpeed = chickenSpeed * (float)(levelData.speed / 1.5);
     }
 
     private void Update()
@@ -20,8 +23,16 @@ public class ChickenMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "LoseCondition")
+        {
             Destroy(gameObject);
+            levelData.succeeded = false;
+            SceneManager.LoadScene("LevelSelect");
+        }
         if (collision.tag == "WinCondition")
+        {
             Debug.Log("Win!");
+            levelData.succeeded = true;
+            SceneManager.LoadScene("LevelSelect");
+        }
     }
 }

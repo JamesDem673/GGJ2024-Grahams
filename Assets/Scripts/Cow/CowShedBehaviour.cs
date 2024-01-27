@@ -5,7 +5,6 @@ using UnityEngine;
 public class CowShedBehaviour : MonoBehaviour
 {
     public GameObject cow;
-    public GameObject moo;
     public float cooldown;
     public float moveamount;
     public float movespeed;
@@ -39,7 +38,6 @@ public class CowShedBehaviour : MonoBehaviour
             {
                 GameObject newCow = Instantiate(cow);
                 newCow.transform.position = transform.position;
-                newCow.GetComponent<CowBehaviour>().moo = moo;
                 fireable = false;
             }
         }
