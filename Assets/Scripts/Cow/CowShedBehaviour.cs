@@ -7,10 +7,23 @@ public class CowShedBehaviour : MonoBehaviour
     public GameObject cow;
     public GameObject moo;
     public float cooldown;
+    public float moveamount;
+    public float movespeed;
+    float startpos;
+    float linepos;
     bool fireable = true;
     float timer = 0;
+    public LevelDataScriptableObject levelData;
+
+    private void Awake()
+    {
+        movespeed = movespeed * levelData.speed;
+        startpos = transform.position.x;
+    }
     private void Update()
     {
+        linepos += Time.deltaTime * movespeed;
+        transform.position = new Vector3(startpos + Mathf.Sin(linepos) * moveamount, transform.position.y, 0);
         if (!fireable)
         {
             timer += Time.deltaTime;

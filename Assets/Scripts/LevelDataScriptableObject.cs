@@ -10,4 +10,5 @@ public class LevelDataScriptableObject : ScriptableObject
     public int score;
     public int currentLevel;
     public int lives;
+    public bool succeeded;
 }

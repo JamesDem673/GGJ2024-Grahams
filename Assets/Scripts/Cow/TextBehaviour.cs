@@ -5,10 +5,11 @@ using UnityEngine;
 public class TextBehaviour : MonoBehaviour
 {
     public float speed;
+    public LevelDataScriptableObject levelData;
     // Start is called before the first frame update
     void Start()
     {
-        
+        speed = speed * levelData.speed;
     }
 
     // Update is called once per frame
