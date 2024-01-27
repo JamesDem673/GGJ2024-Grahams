@@ -6,7 +6,7 @@ public class CarMovement : MonoBehaviour
 {
     private Rigidbody2D carBody;
     public float carSpeed;
-    public LevelDataScriptableObject levelData;
+    public GameData levelData;
 
     private void Awake()
     {

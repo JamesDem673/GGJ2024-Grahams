@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[CreateAssetMenu(fileName = "Data", menuName = "Level Data")]
-public class LevelDataScriptableObject : ScriptableObject
+[CreateAssetMenu(fileName = "Data", menuName = "Game Data")]
+public class GameData : ScriptableObject
 {
     public float speed;
     public int score;

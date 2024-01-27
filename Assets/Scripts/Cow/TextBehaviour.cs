@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class TextBehaviour : MonoBehaviour
 {
     public float speed;
-    public LevelDataScriptableObject levelData;
+    public GameData levelData;
     // Start is called before the first frame update
     void Start()
     {

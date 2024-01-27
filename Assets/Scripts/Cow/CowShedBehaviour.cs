@@ -12,7 +12,7 @@ public class CowShedBehaviour : MonoBehaviour
     float linepos;
     bool fireable = true;
     float timer = 0;
-    public LevelDataScriptableObject levelData;
+    public GameData levelData;
 
     private void Awake()
     {
