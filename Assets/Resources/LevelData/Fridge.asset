@@ -13,8 +13,6 @@ MonoBehaviour:
   m_Name: Fridge
   m_EditorClassIdentifier: 
   sceneName: Fridge
-  jokeStart: 'Is your fridge running?
-
-    Yeah'
+  jokeStart: Is your fridge running?
   jokeEnd: Better catch it then!
   jokeFail: Oh
