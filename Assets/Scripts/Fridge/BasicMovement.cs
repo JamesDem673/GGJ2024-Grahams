@@ -7,7 +7,6 @@ public class BasicMovement : MonoBehaviour
 {
     public GameObject fridge;
     public GameObject floor;
-    public GameData data;
 
     bool movement = true;
 
@@ -18,8 +17,7 @@ public class BasicMovement : MonoBehaviour
 
     private void Start()
     {
-        transform.position = new Vector3(0, -2, 120);
-        movementSpeed *= data.speed;
+        transform.position = new Vector3(0, -2, 40);
     }
 
     private void Update()
