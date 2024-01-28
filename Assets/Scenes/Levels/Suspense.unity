@@ -1195,7 +1195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loss: {fileID: 592952058}
   rope: {fileID: 730662646}
-  levelData: {fileID: 0}
+  levelData: {fileID: 11400000, guid: cf677954b330cac45b6cace6ca4fd027, type: 2}
 --- !u!1 &701679490
 GameObject:
   m_ObjectHideFlags: 0

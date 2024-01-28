@@ -9,11 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 628ef648c93d30145addc45b525a1e6d, type: 3}
-  m_Name: Data
+  m_Script: {fileID: 11500000, guid: 0c79f810adc0f1c41a05da0f4f14b050, type: 3}
+  m_Name: BunnyEars
   m_EditorClassIdentifier: 
-  speed: 3.5
-  score: 500
-  currentLevel: 2
-  lives: 4
-  succeeded: 1
+  sceneName: BunnyEars
+  jokeStart: Lets take a picture!
+  jokeEnd: Hilarious
+  jokeFail: Fail
