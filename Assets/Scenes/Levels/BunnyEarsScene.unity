@@ -3806,6 +3806,7 @@ MonoBehaviour:
   RightButton: {fileID: 1806946707}
   FlashScript: {fileID: 1385372657}
   TimerPhotoText: {fileID: 1876539410}
+  aimPlace: {fileID: 1133229099}
   TimeMax: 8
   HandTarget: {fileID: 1133229099}
   ThumbUI: {fileID: 1135223538}
@@ -3987,7 +3988,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1133229099}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -4000,7 +4001,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 15302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 66c494aa8ad7b494d81f150eb2a5197f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

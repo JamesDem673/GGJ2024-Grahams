@@ -20,6 +20,7 @@ public class BasicMovement : MonoBehaviour
     {
         transform.position = new Vector3(0, -2, 120);
         movementSpeed *= data.speed;
+        transform.position += new Vector3(0, 0, movementSpeed * 2);
     }
 
     private void Update()
