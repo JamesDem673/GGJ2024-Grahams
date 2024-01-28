@@ -81,7 +81,7 @@ public class BasicMovement : MonoBehaviour
         if (other.gameObject.name.Equals("BlockStop"))
         {
             Debug.Log("End");
-            movement = false;
+            floor.transform.SetParent(transform);
         }
     }
 }
