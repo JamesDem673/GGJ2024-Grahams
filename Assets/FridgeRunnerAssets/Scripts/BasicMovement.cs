@@ -7,14 +7,21 @@ public class BasicMovement : MonoBehaviour
 {
     bool movement = true;
 
+    //a +   d -
     float targetXpos = -1000;
-    float stepLength = 0.5f;
+    float stepLength = 0.2f;
+    int movementSpeed = 50;
+
+    private void Start()
+    {
+        if (gameObject.name.Equals("Player"))
+        {
+            transform.position = new Vector3(0, -2, 40);
+        }
+    }
 
     private void Update()
     {
-        //a +   d -
-        int movementSpeed = 50;
-
         if (gameObject.name.Equals("Player"))
         {
             if (Input.GetKeyDown(KeyCode.A))
@@ -25,6 +32,7 @@ public class BasicMovement : MonoBehaviour
                 }
                 else if (transform.position.x == 0)
                 {
+                    Debug.Log("Hello");
                     targetXpos = 4;
                 }
                 stepLength = 0.5f;
@@ -49,6 +57,7 @@ public class BasicMovement : MonoBehaviour
             {
                 if (targetXpos == -1000 | targetXpos == transform.position.x)
                 {
+                    Debug.Log(targetXpos + " " + transform.position.x);
                     transform.position += new Vector3(0, 0, -movementSpeed * Time.deltaTime);
                     stepLength = 0f;
                 }
