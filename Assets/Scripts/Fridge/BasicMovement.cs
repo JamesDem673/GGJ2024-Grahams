@@ -17,7 +17,7 @@ public class BasicMovement : MonoBehaviour
 
     private void Start()
     {
-        transform.position = new Vector3(0, -2, 40);
+        transform.position = new Vector3(0, -2, 120);
     }
 
     private void Update()
