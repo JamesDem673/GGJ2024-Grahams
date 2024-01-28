@@ -8,6 +8,7 @@ public class FridgeMovement : MonoBehaviour
 
     public GameObject loss_text;
     public GameObject win_text;
+    public GameData data;
 
     bool movement = true;
     int movementSpeed = 50;
@@ -30,13 +31,13 @@ public class FridgeMovement : MonoBehaviour
             if(player.activeInHierarchy)
             {
                 // Player Wins
-
+                data.succeeded = true;
                 win_text.SetActive(true);
             }
             else
             {
                 // Player Loses
-
+                data.succeeded = false;
                 loss_text.SetActive(true);
             }
         }
