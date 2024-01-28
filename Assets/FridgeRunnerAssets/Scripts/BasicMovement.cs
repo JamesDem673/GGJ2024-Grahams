@@ -5,93 +5,83 @@ using UnityEngine;
 
 public class BasicMovement : MonoBehaviour
 {
+    public GameObject fridge;
+    public GameObject floor;
+
     bool movement = true;
 
+    //a +   d -
     float targetXpos = -1000;
-    float stepLength = 0.5f;
+    float stepLength = 0.2f;
+    float movementSpeed = 52.2f;
+
+    private void Start()
+    {
+        transform.position = new Vector3(0, -2, 40);
+    }
 
     private void Update()
     {
-        //a +   d -
-        int movementSpeed = 50;
-
-        if (gameObject.name.Equals("Player"))
+        if (Input.GetKeyDown(KeyCode.A))
         {
-            if (Input.GetKeyDown(KeyCode.A))
+            if (transform.position.x == -4)
             {
-                if (transform.position.x == -4)
-                {
-                    targetXpos = 0;
-                }
-                else if (transform.position.x == 0)
-                {
-                    targetXpos = 4;
-                }
-                stepLength = 0.5f;
+                targetXpos = 0;
             }
-
-
-            if (Input.GetKeyDown(KeyCode.D))
+            else if (transform.position.x == 0)
             {
-                if (transform.position.x == 4)
-                {
-                    targetXpos = 0;
-                }
-                else if (transform.position.x == 0)
-                {
-                    targetXpos = -4;
-                }
-                stepLength = -0.5f;
+                targetXpos = 4;
             }
-
-
-            if (movement)
-            {
-                if (targetXpos == -1000 | targetXpos == transform.position.x)
-                {
-                    transform.position += new Vector3(0, 0, -movementSpeed * Time.deltaTime);
-                    stepLength = 0f;
-                }
-                else
-                {
-                    transform.position += new Vector3(stepLength, 0, -movementSpeed * Time.deltaTime);                             
-                }
-            }
+            stepLength = 0.5f;
         }
 
-        if (gameObject.name.Equals("Fridge"))
+
+        if (Input.GetKeyDown(KeyCode.D))
         {
-            if (movement)
+            if (transform.position.x == 4)
+            {
+                targetXpos = 0;
+            }
+            else if (transform.position.x == 0)
+            {
+                targetXpos = -4;
+            }
+            stepLength = -0.5f;
+        }
+
+
+        if (movement)
+        {
+            if (targetXpos == -1000 | targetXpos == transform.position.x)
             {
                 transform.position += new Vector3(0, 0, -movementSpeed * Time.deltaTime);
+                stepLength = 0f;
+            }
+            else
+            {
+                transform.position += new Vector3(stepLength, 0, -movementSpeed * Time.deltaTime);
             }
         }
 
+        if (transform.position.z < -300)
+        {
+            floor.transform.SetParent(gameObject.transform);
+        }
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name.Equals("Dangerzone"))
         {
-            PlayerLoses(); 
+            transform.GetChild(0).SetParent(null, true);
+            movement = false;
+            gameObject.SetActive(false);
         }
 
         if (other.gameObject.name.Equals("BlockStop"))
         {
-            PlayerWins();
+            Debug.Log("End");
+            floor.transform.SetParent(transform);
         }
-    }
-
-    void PlayerLoses()
-    {
-        transform.GetChild(0).SetParent(null, true);
-        Destroy(gameObject);
-    }
-
-    void PlayerWins()
-    {
-        Debug.Log("Win");
-        movement = false;
-        GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
     }
 }
