@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FridgeMovement : MonoBehaviour
 {
@@ -9,8 +10,13 @@ public class FridgeMovement : MonoBehaviour
     public GameData data;
 
     bool movement = true;
-    int movementSpeed = 50;
+    float movementSpeed = 50;
 
+
+    private void Start()
+    {
+        movementSpeed *= data.speed;
+    }
 
     private void Update()
     {
@@ -36,6 +42,7 @@ public class FridgeMovement : MonoBehaviour
                 // Player Loses
                 data.succeeded = false;
             }
+            SceneManager.LoadScene("LevelSelect");
         }
     }
 
