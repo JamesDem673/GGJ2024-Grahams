@@ -13,9 +13,11 @@ public class CowShedBehaviour : MonoBehaviour
     bool fireable = true;
     float timer = 0;
     public GameData levelData;
+    private AudioSource audioSource;
 
     private void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         movespeed = movespeed * levelData.speed;
         startpos = transform.position.x;
     }
@@ -41,6 +43,7 @@ public class CowShedBehaviour : MonoBehaviour
                 GameObject newCow = Instantiate(cow);
                 newCow.transform.position = transform.position;
                 fireable = false;
+                audioSource.Play();
             }
         }
     }
