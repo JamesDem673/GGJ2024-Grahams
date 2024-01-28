@@ -74,7 +74,6 @@ public class ObstacleControl : MonoBehaviour
             }
         }
 
-        Debug.Log(newCode);
 
         SafeLane1 = newCode[0];
         SafeLane1 -= 48;
@@ -85,10 +84,6 @@ public class ObstacleControl : MonoBehaviour
         SafeLane4 = newCode[3];
         SafeLane4 -= 48;
 
-        Debug.Log(SafeLane1);
-        Debug.Log(SafeLane2);
-        Debug.Log(SafeLane3);
-        Debug.Log(SafeLane4);
 
         UnityEngine.Random.InitState(DateTime.Now.TimeOfDay.Seconds);
 
