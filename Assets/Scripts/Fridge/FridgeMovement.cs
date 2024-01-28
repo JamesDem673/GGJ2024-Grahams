@@ -1,18 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FridgeMovement : MonoBehaviour
 {
     public GameObject player;
 
-    public GameObject loss_text;
-    public GameObject win_text;
     public GameData data;
 
     bool movement = true;
-    int movementSpeed = 50;
+    float movementSpeed = 50;
 
+
+    private void Start()
+    {
+        movementSpeed *= data.speed;
+    }
 
     private void Update()
     {
@@ -32,14 +36,13 @@ public class FridgeMovement : MonoBehaviour
             {
                 // Player Wins
                 data.succeeded = true;
-                win_text.SetActive(true);
             }
             else
             {
                 // Player Loses
                 data.succeeded = false;
-                loss_text.SetActive(true);
             }
+            SceneManager.LoadScene("LevelSelect");
         }
     }
 
