@@ -6,20 +6,27 @@ public class StaticMovement3D : MonoBehaviour
 {
     public float staticSpeed;
 
+    public GameObject bottomBound;
+    public GameObject topBound;
+
+    float topYval;
+    float bottomYval;
+
+    private void Start()
+    {
+        topYval = topBound.transform.position.y;
+        bottomYval = bottomBound.transform.position.y;
+    }
+
+
     private void Update()
     {
         transform.position -= new Vector3(0, Time.deltaTime * staticSpeed, 0);
 
-        if (transform.position.y < -242.0417)
+        if (transform.position.y < bottomYval)
         {
-            transform.position = new Vector3(735, 970.7084f, 0);
+            transform.position = new Vector3(735, topYval, 0);
         }
     }
 }
 
-
-
-//bottom -242.0417
-//top 970.7084
-//x 735
-//z 0
