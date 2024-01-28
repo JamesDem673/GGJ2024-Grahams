@@ -32,7 +32,7 @@ public class CabinetManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        TimeMax -= (data.speed / 2);
+        TimeMax /= (data.speed * 0.75f);
         TimerPhotoText.GetComponent<PhotoTimerScript>().SetTimerSecondValue(TimeMax);
     }
 

@@ -9,7 +9,7 @@ public class HandMovement : MonoBehaviour
     public GameData data;
     void Start()
     {
-        MoveStep = MoveStep * data.speed;
+        MoveStep = MoveStep * data.speed * 0.75f;
     }
 
     // Update is called once per frame

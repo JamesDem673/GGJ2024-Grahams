@@ -3656,7 +3656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: 0.826087, a: 0.078431375}
+  m_Color: {r: 0.5647059, g: 0.5647059, b: 0.5647059, a: 0.078431375}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4528,6 +4528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelData: {fileID: 11400000, guid: cf677954b330cac45b6cace6ca4fd027, type: 2}
+  L1: {fileID: 418272773}
   L2: {fileID: 928045600}
   L3: {fileID: 760945181}
   L4: {fileID: 91054970}
@@ -5304,7 +5305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: 0.826087, a: 0.078431375}
+  m_Color: {r: 0.5647059, g: 0.5647059, b: 0.5647059, a: 0.078431375}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
