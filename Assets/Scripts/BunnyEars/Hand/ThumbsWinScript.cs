@@ -9,6 +9,8 @@ public class ThumbsWinScript : MonoBehaviour
     public float Offset;
     private float OriginYVal;
     private bool IsWin;
+    public Sprite thumbsUp;
+    public Sprite ThumbsDown;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,13 +32,14 @@ public class ThumbsWinScript : MonoBehaviour
 
     private void ToggleThumbImage()
     {
+        gameObject.GetComponent<Image>().color = new Color(1, 1, 1, 1);
         if (IsWin)
         {
-            gameObject.GetComponent<Image>().color = Color.green;
+            gameObject.GetComponent<Image>().sprite = thumbsUp;
         }
         else
         {
-            gameObject.GetComponent<Image>().color= Color.red;
+            gameObject.GetComponent<Image>().sprite = ThumbsDown;
         }
     }
 }

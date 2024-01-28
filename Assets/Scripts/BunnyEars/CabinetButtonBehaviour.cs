@@ -47,6 +47,7 @@ public class CabinetButtonBehaviour : MonoBehaviour
 
     private void OnMouseOver()
     {
+        print("a");
         if (Input.GetMouseButtonDown(0))
         {
             Vector3 Pos = gameObject.transform.position;
