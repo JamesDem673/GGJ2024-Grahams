@@ -106,7 +106,7 @@ public class LevelSelect : MonoBehaviour
         {
             if (Input.GetAxis("Jump") != 0)
             {
-                SceneManager.LoadScene(nextLevel.sceneName);
+                SceneManager.LoadSceneAsync(nextLevel.sceneName);
             }
         }
     }

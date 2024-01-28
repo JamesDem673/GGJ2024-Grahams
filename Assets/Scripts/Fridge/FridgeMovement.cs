@@ -16,6 +16,7 @@ public class FridgeMovement : MonoBehaviour
     private void Start()
     {
         movementSpeed *= data.speed;
+        transform.position += new Vector3(0, 0, movementSpeed * 2);
     }
 
     private void Update()
