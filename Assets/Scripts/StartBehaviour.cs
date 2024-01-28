@@ -15,6 +15,7 @@ public class StartBehaviour : MonoBehaviour
         levelData.speed = startSpeed;
         levelData.score = 0;
         levelData.currentLevel = -1;
+        levelData.lives = 4;
         levelData.lives = startLives;
         levelData.succeeded = true;
     }
