@@ -286,10 +286,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06477388abce4264f995f5216e6920c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelData: {fileID: 0}
-  L2: {fileID: 0}
-  L3: {fileID: 0}
-  L4: {fileID: 0}
+  levelData: {fileID: 11400000, guid: cf677954b330cac45b6cace6ca4fd027, type: 2}
+  L2: {fileID: 972841964}
+  L3: {fileID: 373059395}
+  L4: {fileID: 966816551}
 --- !u!1 &128233038
 GameObject:
   m_ObjectHideFlags: 0
