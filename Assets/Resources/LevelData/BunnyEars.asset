@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0c79f810adc0f1c41a05da0f4f14b050, type: 3}
-  m_Name: Suspense
+  m_Name: BunnyEars
   m_EditorClassIdentifier: 
-  sceneName: Suspense
-  jokeStart: How do you keep an idiot in suspense?
-  jokeEnd: Just like that!
-  jokeFail: Idiot
+  sceneName: BunnyEars
+  jokeStart: Lets take a picture!
+  jokeEnd: Hilarious
+  jokeFail: Fail
