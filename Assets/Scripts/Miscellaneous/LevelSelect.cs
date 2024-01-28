@@ -117,9 +117,9 @@ public class LevelSelect : MonoBehaviour
             if (Input.GetAxis("Jump") != 0)
             {
                 if (gameOver)
-                    SceneManager.LoadSceneAsync("TitleScreen");
+                    SceneManager.LoadScene("TitleScreen");
                 else
-                    SceneManager.LoadSceneAsync(nextLevel.sceneName);
+                    SceneManager.LoadScene(nextLevel.sceneName);
             }
         }
     }
