@@ -11,11 +11,16 @@ public class StaticMovement3D : MonoBehaviour
 
     float topYval;
     float bottomYval;
+    float xVal;
+    float zVal;
 
     private void Start()
     {
         topYval = topBound.transform.position.y;
         bottomYval = bottomBound.transform.position.y;
+
+        xVal = topBound.transform.position.x;
+        zVal = topBound.transform.position.z;
     }
 
 
@@ -25,7 +30,7 @@ public class StaticMovement3D : MonoBehaviour
 
         if (transform.position.y < bottomYval)
         {
-            transform.position = new Vector3(735, topYval, 0);
+            transform.position = new Vector3(xVal, topYval, zVal);
         }
     }
 }

@@ -14,10 +14,15 @@ public class ObstacleControl : MonoBehaviour
     public GameObject section3;
     public GameObject section4;
 
-    float SafeLane1 = 0;
-    float SafeLane2 = 0;
-    float SafeLane3 = 0;
-    float SafeLane4 = 0;
+    int SafeLane1 = 0;
+    int SafeLane2 = 0;
+    int SafeLane3 = 0;
+    int SafeLane4 = 0;
+
+    float Safex1;
+    float Safex2;
+    float Safex3;
+    float Safex4;
 
     int block_count = 0;
 
@@ -29,52 +34,70 @@ public class ObstacleControl : MonoBehaviour
         string timeComb = (seconds + milliseconds);
 
         string fourNums = timeComb.Substring(0, 4);
+        string newCode = "";
 
         for (int i = 0; i < 4; i++)
         {
             switch (fourNums[i])
             {
+                case '0':
+                    newCode += '0';
+                    break;
+                case '1':
+                    newCode += '1';
+                    break;
+                case '2':
+                    newCode += '2';
+                    break;
+                case '3':
+                    newCode += '0';
+                    break;
                 case '4':
-                    //fourNums[i] = 
+                    newCode += '1';
                     break;
-
                 case '5':
+                    newCode += '2';
                     break;
-
                 case '6':
+                    newCode += '0';
                     break;
-
                 case '7':
+                    newCode += '1';
                     break;
-
                 case '8':
+                    newCode += '2';
                     break;
-
                 case '9':
+                    newCode += '0';
                     break;
 
             }
         }
 
 
+        SafeLane1 = newCode[0];
+        SafeLane1 -= 48;
+        SafeLane2 = newCode[1];
+        SafeLane2 -= 48;
+        SafeLane3 = newCode[2];
+        SafeLane3 -= 48;
+        SafeLane4 = newCode[3];
+        SafeLane4 -= 48;
+
 
         UnityEngine.Random.InitState(DateTime.Now.TimeOfDay.Seconds);
-        int randomNum = UnityEngine.Random.Range(0, 2);
 
-        section1.transform.GetChild(randomNum).gameObject.SetActive(false);
-        SafeLane1 = section1.transform.GetChild(randomNum).transform.position.x;
+        section1.transform.GetChild(SafeLane1).gameObject.SetActive(false);
+        Safex1 = section1.transform.GetChild(SafeLane1).transform.position.x;
 
-        randomNum = UnityEngine.Random.Range(0, 2);
-        section2.transform.GetChild(randomNum).gameObject.SetActive(false);
-        SafeLane2 = section2.transform.GetChild(randomNum).transform.position.x;
+        section2.transform.GetChild(SafeLane2).gameObject.SetActive(false);
+        Safex2 = section2.transform.GetChild(SafeLane2).transform.position.x;
 
-        randomNum = UnityEngine.Random.Range(0, 2);
-        section3.transform.GetChild(randomNum).gameObject.SetActive(false);
-        SafeLane3 = section3.transform.GetChild(randomNum).transform.position.x;
+        section3.transform.GetChild(SafeLane3).gameObject.SetActive(false);
+        Safex3 = section3.transform.GetChild(SafeLane3).transform.position.x;
 
-        randomNum = UnityEngine.Random.Range(0, 2);
-        section4.transform.GetChild(randomNum).gameObject.SetActive(false);
-        SafeLane4 = section4.transform.GetChild(randomNum).transform.position.x;
+        section4.transform.GetChild(SafeLane4).gameObject.SetActive(false);
+        Safex4 = section4.transform.GetChild(SafeLane4).transform.position.x;
     }
 
     void OnTriggerEnter(Collider other)
@@ -84,16 +107,16 @@ public class ObstacleControl : MonoBehaviour
             switch (block_count)
             {
                 case 0:
-                    fridge.transform.position = new Vector3(SafeLane1, fridge.transform.position.y, fridge.transform.position.z);
+                    fridge.transform.position = new Vector3(Safex1, fridge.transform.position.y, fridge.transform.position.z);
                     break;
                 case 1:
-                    fridge.transform.position = new Vector3(SafeLane2, fridge.transform.position.y, fridge.transform.position.z);
+                    fridge.transform.position = new Vector3(Safex2, fridge.transform.position.y, fridge.transform.position.z);
                     break;
                 case 2:
-                    fridge.transform.position = new Vector3(SafeLane3, fridge.transform.position.y, fridge.transform.position.z);
+                    fridge.transform.position = new Vector3(Safex3, fridge.transform.position.y, fridge.transform.position.z);
                     break;
                 case 3:
-                    fridge.transform.position = new Vector3(SafeLane4, fridge.transform.position.y, fridge.transform.position.z);
+                    fridge.transform.position = new Vector3(Safex4, fridge.transform.position.y, fridge.transform.position.z);
                     break;
             }
         }
