@@ -13,7 +13,7 @@ public class BasicMovement : MonoBehaviour
     //a +   d -
     float targetXpos = -1000;
     float stepLength = 0.2f;
-    float movementSpeed = 52.2f;
+    float movementSpeed = 51.75f;
 
     private void Start()
     {

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
@@ -22,21 +23,56 @@ public class ObstacleControl : MonoBehaviour
 
     void Start()
     {
-        Random.InitState(42);
-        int randomNum = Random.Range(0, 2);
+        string seconds = DateTime.Now.TimeOfDay.Seconds.ToString();
+        string milliseconds = DateTime.Now.TimeOfDay.Milliseconds.ToString();
+
+        string timeComb = (seconds + milliseconds);
+
+        string fourNums = timeComb.Substring(0, 4);
+
+        for (int i = 0; i < 4; i++)
+        {
+            switch (fourNums[i])
+            {
+                case '4':
+                    //fourNums[i] = 
+                    break;
+
+                case '5':
+                    break;
+
+                case '6':
+                    break;
+
+                case '7':
+                    break;
+
+                case '8':
+                    break;
+
+                case '9':
+                    break;
+
+            }
+        }
+
+
+
+        UnityEngine.Random.InitState(DateTime.Now.TimeOfDay.Seconds);
+        int randomNum = UnityEngine.Random.Range(0, 2);
 
         section1.transform.GetChild(randomNum).gameObject.SetActive(false);
         SafeLane1 = section1.transform.GetChild(randomNum).transform.position.x;
 
-        randomNum = Random.Range(0, 2);
+        randomNum = UnityEngine.Random.Range(0, 2);
         section2.transform.GetChild(randomNum).gameObject.SetActive(false);
         SafeLane2 = section2.transform.GetChild(randomNum).transform.position.x;
 
-        randomNum = Random.Range(0, 2);
+        randomNum = UnityEngine.Random.Range(0, 2);
         section3.transform.GetChild(randomNum).gameObject.SetActive(false);
         SafeLane3 = section3.transform.GetChild(randomNum).transform.position.x;
 
-        randomNum = Random.Range(0, 2);
+        randomNum = UnityEngine.Random.Range(0, 2);
         section4.transform.GetChild(randomNum).gameObject.SetActive(false);
         SafeLane4 = section4.transform.GetChild(randomNum).transform.position.x;
     }
