@@ -32,7 +32,6 @@ public class BasicMovement : MonoBehaviour
                 }
                 else if (transform.position.x == 0)
                 {
-                    Debug.Log("Hello");
                     targetXpos = 4;
                 }
                 stepLength = 0.5f;
