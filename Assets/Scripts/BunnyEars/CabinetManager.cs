@@ -26,10 +26,12 @@ public class CabinetManager : MonoBehaviour
     bool ButtonLock;
     bool hasWon;
     bool TimerStarted = false;
+
+    public GameData data;
     // Start is called before the first frame update
     void Start()
     {
-
+        TimeMax -= (data.speed / 2);
         TimerPhotoText.GetComponent<PhotoTimerScript>().SetTimerSecondValue(TimeMax);
     }
 
@@ -50,11 +52,13 @@ public class CabinetManager : MonoBehaviour
             {
                 hasWon = true;
                 ThumbUI.GetComponent<ThumbsWinScript>().SetWin(true);
+                data.succeeded = true;
             }
             else
             {
                 hasWon = false;
                 ThumbUI.GetComponent<ThumbsWinScript>().SetWin(false);
+                data.succeeded = false;
             }
 
         }

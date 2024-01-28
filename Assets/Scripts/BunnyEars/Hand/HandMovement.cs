@@ -6,9 +6,10 @@ public class HandMovement : MonoBehaviour
 {
     // Start is called before the first frame update
     public float MoveStep = 0.03f;
+    public GameData data;
     void Start()
     {
-        
+        MoveStep = MoveStep * data.speed;
     }
 
     // Update is called once per frame
@@ -19,11 +20,11 @@ public class HandMovement : MonoBehaviour
 
     public void MoveHandUp()
     {
-        if (gameObject.transform.position.y < 137.08)
+        if (gameObject.transform.position.y < 139.08)
         {
             float currentValue = gameObject.transform.position.y;
 
-            gameObject.transform.position = new Vector3(gameObject.transform.position.x, currentValue + MoveStep, gameObject.transform.position.z);
+            gameObject.transform.position = new Vector3(gameObject.transform.position.x, currentValue + (MoveStep * Time.deltaTime), gameObject.transform.position.z);
         }
         // increase the Y value of the gameobject
         
@@ -36,7 +37,7 @@ public class HandMovement : MonoBehaviour
             float CurrentValuex = gameObject.transform.position.x;
             float CurrentValuez = gameObject.transform.position.z;
 
-            gameObject.transform.position = new Vector3(CurrentValuex - MoveStep, gameObject.transform.position.y, CurrentValuez - MoveStep);
+            gameObject.transform.position = new Vector3(CurrentValuex - (MoveStep * Time.deltaTime), gameObject.transform.position.y, CurrentValuez - (MoveStep * Time.deltaTime));
         }
     }
 
@@ -46,7 +47,7 @@ public class HandMovement : MonoBehaviour
         {
             float CurrentValue = gameObject.transform.position.y;
 
-            gameObject.transform.position = new Vector3(gameObject.transform.position.x, CurrentValue - MoveStep, gameObject.transform.position.z);
+            gameObject.transform.position = new Vector3(gameObject.transform.position.x, CurrentValue - (MoveStep * Time.deltaTime), gameObject.transform.position.z);
         }
         
     }
@@ -58,7 +59,7 @@ public class HandMovement : MonoBehaviour
             float CurrentValuex = gameObject.transform.position.x;
             float CurrentValuez = gameObject.transform.position.z;
 
-            gameObject.transform.position = new Vector3(CurrentValuex + MoveStep, gameObject.transform.position.y, CurrentValuez + MoveStep);
+            gameObject.transform.position = new Vector3(CurrentValuex + (MoveStep * Time.deltaTime), gameObject.transform.position.y, CurrentValuez + (MoveStep * Time.deltaTime));
         }
     }
 }

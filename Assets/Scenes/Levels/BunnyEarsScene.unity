@@ -3387,7 +3387,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.75, y: 0.5, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &928333141
 MeshRenderer:
@@ -3466,7 +3466,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34abdfeb340435f47afb82c0380d6db3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveStep: 0.03
+  MoveStep: 3
+  data: {fileID: 11400000, guid: cf677954b330cac45b6cace6ca4fd027, type: 2}
 --- !u!54 &928333145
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3808,6 +3809,7 @@ MonoBehaviour:
   TimeMax: 8
   HandTarget: {fileID: 1133229099}
   ThumbUI: {fileID: 1135223538}
+  data: {fileID: 11400000, guid: cf677954b330cac45b6cace6ca4fd027, type: 2}
 --- !u!4 &982922114
 Transform:
   m_ObjectHideFlags: 0
@@ -3985,7 +3987,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1133229099}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -4037,8 +4039,8 @@ Transform:
   m_GameObject: {fileID: 1133229099}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.40960252, z: -0, w: 0.9122641}
-  m_LocalPosition: {x: -0.904, y: 136.69, z: 1.038}
-  m_LocalScale: {x: 0.3780232, y: 0.76075315, z: 0.3402022}
+  m_LocalPosition: {x: -0.904, y: 137.08, z: 1.038}
+  m_LocalScale: {x: 0.3780232, y: 0.43771455, z: 0.3402022}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

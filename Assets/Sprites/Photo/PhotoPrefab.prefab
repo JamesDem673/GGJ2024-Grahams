@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 1538469934840499091}
   - component: {fileID: 5390172957562891315}
   - component: {fileID: 4972240528464981130}
+  - component: {fileID: 5742420391631597480}
   m_Layer: 5
   m_Name: PhotoShot
   m_TagString: Untagged
@@ -148,3 +149,16 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!114 &5742420391631597480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6455644275599639028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 167be0fe47ea19d40a1dff4fea12ed3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endTimer: 2
