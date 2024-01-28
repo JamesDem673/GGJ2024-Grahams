@@ -17,6 +17,7 @@ public class CabinetManager : MonoBehaviour
     public GameObject RightButton;
     public Transform FlashScript;
     public TextMeshPro TimerPhotoText;
+    public GameObject aimPlace;
     public float TimeMax;
     public GameObject HandTarget;
     public Transform ThumbUI;
@@ -40,6 +41,7 @@ public class CabinetManager : MonoBehaviour
     {
         if (AddPhoto)
         {
+            aimPlace.SetActive(false);
             Instantiate(PhotoPrefab, Canvas);
             FlashScript.GetComponent<FlashScript>().CameraFlash();
             PhotoAdded = true;

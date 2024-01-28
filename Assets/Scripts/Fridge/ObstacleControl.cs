@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -28,61 +27,14 @@ public class ObstacleControl : MonoBehaviour
 
     void Start()
     {
-        string seconds = DateTime.Now.TimeOfDay.Seconds.ToString();
-        string milliseconds = DateTime.Now.TimeOfDay.Milliseconds.ToString();
+        SafeLane1 = UnityEngine.Random.Range(0, 3);
 
-        string timeComb = (seconds + milliseconds);
+        SafeLane2 = UnityEngine.Random.Range(0, 3);
 
-        string fourNums = timeComb.Substring(0, 4);
-        string newCode = "";
+        SafeLane3 = UnityEngine.Random.Range(0, 3);
 
-        for (int i = 0; i < 4; i++)
-        {
-            switch (fourNums[i])
-            {
-                case '0':
-                    newCode += '0';
-                    break;
-                case '1':
-                    newCode += '1';
-                    break;
-                case '2':
-                    newCode += '2';
-                    break;
-                case '3':
-                    newCode += '0';
-                    break;
-                case '4':
-                    newCode += '1';
-                    break;
-                case '5':
-                    newCode += '2';
-                    break;
-                case '6':
-                    newCode += '0';
-                    break;
-                case '7':
-                    newCode += '1';
-                    break;
-                case '8':
-                    newCode += '2';
-                    break;
-                case '9':
-                    newCode += '0';
-                    break;
+        SafeLane4 = UnityEngine.Random.Range(0, 3);
 
-            }
-        }
-
-
-        SafeLane1 = newCode[0];
-        SafeLane1 -= 48;
-        SafeLane2 = newCode[1];
-        SafeLane2 -= 48;
-        SafeLane3 = newCode[2];
-        SafeLane3 -= 48;
-        SafeLane4 = newCode[3];
-        SafeLane4 -= 48;
 
 
         UnityEngine.Random.InitState(DateTime.Now.TimeOfDay.Seconds);
