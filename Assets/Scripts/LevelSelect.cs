@@ -17,6 +17,7 @@ public class LevelSelect : MonoBehaviour
     public float jokeEndTime;
     bool jokeEndShowing = false;
     float jokeEndTimer = 0;
+    bool gameOver = false;
 
     LevelData nextLevel;
 
@@ -37,7 +38,16 @@ public class LevelSelect : MonoBehaviour
             else
             {
                 data.lives--;
-                jokeText.text = levels[data.currentLevel].jokeFail;
+                if (data.lives == 0)
+                {
+                    jokeEndShowing = false;
+                    gameOver = true;
+                    jokeText.text = "Game Over";
+                    startText.SetActive(true);
+                    startText.GetComponent<TextMeshProUGUI>().text = "Press space to continue";
+                }
+                else
+                    jokeText.text = levels[data.currentLevel].jokeFail;
             }
         }
 
@@ -106,7 +116,10 @@ public class LevelSelect : MonoBehaviour
         {
             if (Input.GetAxis("Jump") != 0)
             {
-                SceneManager.LoadSceneAsync(nextLevel.sceneName);
+                if (gameOver)
+                    SceneManager.LoadSceneAsync("TitleScreen");
+                else
+                    SceneManager.LoadSceneAsync(nextLevel.sceneName);
             }
         }
     }

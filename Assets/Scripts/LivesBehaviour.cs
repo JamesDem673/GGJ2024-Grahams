@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LivesBehaviour : MonoBehaviour
 {
     public GameData levelData;
+    public GameObject L1;
     public GameObject L2;
     public GameObject L3;
     public GameObject L4;
@@ -26,6 +28,11 @@ public class LivesBehaviour : MonoBehaviour
             L2.SetActive(false);
         }
         if (levelData.lives == 0)
-            SceneManager.LoadScene("LevelSelect");
+        {
+            L4.SetActive(false);
+            L3.SetActive(false);
+            L2.SetActive(false);
+            L1.SetActive(false);
+        }
     }
 }
