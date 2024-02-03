@@ -25,7 +25,6 @@ public class CabinetManager : MonoBehaviour
     bool AddPhoto = false;
     bool PhotoAdded = false;
     bool ButtonLock;
-    bool hasWon;
     bool TimerStarted = false;
 
     public GameData data;
@@ -52,13 +51,11 @@ public class CabinetManager : MonoBehaviour
             RightButton.GetComponent<CabinetButtonBehaviour>().SetButtonLock(true);
             if (HandTarget.GetComponent<HandTargetScript>().GetWinCondition())
             {
-                hasWon = true;
                 ThumbUI.GetComponent<ThumbsWinScript>().SetWin(true);
                 data.succeeded = true;
             }
             else
             {
-                hasWon = false;
                 ThumbUI.GetComponent<ThumbsWinScript>().SetWin(false);
                 data.succeeded = false;
             }

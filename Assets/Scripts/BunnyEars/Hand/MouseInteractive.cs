@@ -33,8 +33,6 @@ public class MouseInteractive : MonoBehaviour
 
 
             point = Camera.ScreenToWorldPoint(new Vector3(MouseCursorPos.x, MouseCursorPos.y, Camera.transform.position.z));
-            Debug.Log(MouseCursorPos.x);
-            Debug.Log(MouseCursorPos.y);
             MousePosX = MouseCursorPos.x;
             MousePosY = MouseCursorPos.y;
             point.z = gameObject.transform.position.z;
