@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: BunnyEarsScene
   jokeStart: Lets take a picture!
-  jokeEnd: Hilarious
-  jokeFail: Fail
+  jokeEnd: Hilarious.
+  jokeFail: Fail.

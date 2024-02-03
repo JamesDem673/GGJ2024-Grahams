@@ -44,7 +44,7 @@ public class LevelSelect : MonoBehaviour
                     gameOver = true;
                     jokeText.text = "Game Over";
                     startText.SetActive(true);
-                    startText.GetComponent<TextMeshProUGUI>().text = "Press space to continue";
+                    startText.GetComponent<TextMeshProUGUI>().text = "Press Space to continue";
                 }
                 else
                     jokeText.text = levels[data.currentLevel].jokeFail;
@@ -81,7 +81,6 @@ public class LevelSelect : MonoBehaviour
                 }
             }
             int a = Random.Range(0, levels2.Length);
-            print(a);
             nextLevel = levels2[a];
             if (a >= removedIndex)
             {
@@ -92,7 +91,6 @@ public class LevelSelect : MonoBehaviour
         else
         {
             int a = Random.Range(0, levels.Length);
-            print(a);
             nextLevel = levels[a];
             data.currentLevel = a;
             jokeText.text = nextLevel.jokeStart;

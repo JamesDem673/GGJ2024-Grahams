@@ -9,7 +9,7 @@ public class StaticMovement : MonoBehaviour
     void Update()
     {
         transform.position -= new Vector3(0, Time.deltaTime * staticSpeed);
-        if (transform.position.y < -8.2825)
+        if (transform.position.y < -8.25)
             transform.position = new Vector2(transform.position.x, 8);
     }
 }
